@@ -20,7 +20,7 @@ void usage(int argc, char *argv[]) {
 }
 
 
-vector<int> Primes (int parameter){
+int Primes (int parameter){
     vector <int> primes;
     do {
         int dividers = 0;
@@ -36,13 +36,11 @@ vector<int> Primes (int parameter){
         }
     } while (primes [parameter] != 0);
     
-    return primes;
 }
 
 int main(int argc,char *argv[]){
 
     int parameter = atoi (argv[1]);
-    vector<int> final = Primes(parameter);
-    cout << final[parameter] << endl;
+    cout << Primes (parameter) << endl;
     return 0;
 }
